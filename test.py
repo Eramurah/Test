@@ -1,14 +1,9 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
 import random
 import psutil
 import uvicorn
 
 app = FastAPI()
-
-
-class NameRequest(BaseModel):
-    name: str
 
 
 @app.get("/api/status")
